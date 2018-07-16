@@ -18,7 +18,7 @@ import java.util.List;
  *
  */
 public class App {
-    private String name = "add";
+    private String name = "悦诗风吟";
 
     public static void main( String[] args ) throws Exception {
 
