@@ -18,6 +18,7 @@ import java.util.List;
  *
  */
 public class App {
+    private String name = "spring";
 
     public static void main( String[] args ) throws Exception {
 
