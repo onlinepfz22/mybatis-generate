@@ -18,6 +18,8 @@ import java.util.List;
  *
  */
 public class App {
+    private String name = "add";
+
     public static void main( String[] args ) throws Exception {
 
         App app = new App();
