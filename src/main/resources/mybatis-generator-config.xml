@@ -23,7 +23,7 @@
         <!-- sql server数据库连接-->
         <jdbcConnection
                 driverClass="net.sourceforge.jtds.jdbc.Driver"
-                connectionURL="jdbc:jtds:sqlserver://10.10.2.52:1433;DatabaseName=PORTAL5X_ECIS"
+                connectionURL="jdbc:jtds:sqlserver://127.0.0.1:1433;DatabaseName=PORTAL5X_ECIS"
                 userId="sa"
                 password="spring">
         </jdbcConnection>
