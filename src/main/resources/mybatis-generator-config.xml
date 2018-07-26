@@ -20,12 +20,20 @@
             password="Dolay123456">
         </jdbcConnection>-->
 
-        <!-- sql server数据库连接-->
+        <!-- sql server数据库本地连接-->
+        <!--<jdbcConnection
+            driverClass="net.sourceforge.jtds.jdbc.Driver"
+            connectionURL="jdbc:jtds:sqlserver://127.0.0.1:1433;DatabaseName=PORTAL5X_ECIS"
+            userId="sa"
+            password="spring">
+        </jdbcConnection>-->
+
+        <!-- sql server数据库远程连接-->
         <jdbcConnection
-                driverClass="net.sourceforge.jtds.jdbc.Driver"
-                connectionURL="jdbc:jtds:sqlserver://127.0.0.1:1433;DatabaseName=PORTAL5X_ECIS"
-                userId="sa"
-                password="spring">
+            driverClass="net.sourceforge.jtds.jdbc.Driver"
+            connectionURL="jdbc:jtds:sqlserver://10.10.2.52:1433;DatabaseName=PORTAL5X_ECIS;instance=SQL2008"
+            userId="sa"
+            password="bsoft_123">
         </jdbcConnection>
 
         <!--<javaTypeResolver >
@@ -63,8 +71,8 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 tableName表名 domainObjectName指定插件生成的表的映射类名,可自行定义-->
-        <table tableName="po_user" schema="">
-            <!--<property name="useActualColumnNames" value="true"/>-->
+        <!--<table tableName="po_user" schema="">
+            &lt;!&ndash;<property name="useActualColumnNames" value="true"/>&ndash;&gt;
             <generatedKey column="ID" sqlStatement="mysql" identity="true"/>
             <columnOverride column="DEPT_ID" property="deptId"/>
             <columnOverride column="ROLE_ID" property="roleId"/>
@@ -73,10 +81,10 @@
             <columnOverride column="PASSWORD" property="password" javaType="java.lang.String" />
             <columnOverride column="REALNAME" property="realName" javaType="java.lang.String" />
             <columnOverride column="LASTTIME" property="lastTime" javaType="java.lang.String" />
-            <!--<columnOverride column="DATE_FIELD" property="startDate" />
+            &lt;!&ndash;<columnOverride column="DATE_FIELD" property="startDate" />
             <ignoreColumn column="FRED" />
-            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />-->
-        </table>
+            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />&ndash;&gt;
+        </table>-->
 
         <!--<table tableName="po_role" schema="">
             &lt;!&ndash;<property name="userActualColumnNames" value="true"/>&ndash;&gt;
@@ -89,7 +97,7 @@
             <generatedKey column="ID" sqlStatement="mysql" identity="true"/>
         </table>-->
 
-        <table tableName="ECIS_CWSZ"></table>
+        <table tableName="V_ECIS_JZJL"></table>
 
     </context>
 </generatorConfiguration>

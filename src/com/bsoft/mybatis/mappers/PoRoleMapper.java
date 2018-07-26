@@ -1,7 +1,5 @@
 package com.bsoft.root.mappers;
 
-import com.bsoft.root.entity.PoRole;
-import com.bsoft.root.entity.PoRoleExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
